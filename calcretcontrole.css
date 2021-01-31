@@ -1,0 +1,279 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#geral {
+    position: absolute;
+    background-color: #FCA311; 
+    width: 100%;
+    min-width: 1210px;
+    height: 100%;
+    min-height: 680px;
+}
+
+#cabeçalho {
+    position: absolute;
+    /* background-color: #E5E5E5; */
+    background-color: brown;
+    color: white;
+    width: 99.5%;
+    height: 55px;
+    padding-top: 4px;
+    text-align: center;
+    border: 4px silver outset;
+    border-radius: 10px;
+    margin: 4px;
+    box-shadow: 3px 3px 10px black;
+}
+
+#dados1 {
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    top: 75px;
+    left: 20px;
+    width: 325px;
+    height: 600px;
+    padding-left: 15px;
+}
+
+#dados1:hover {
+    color: white;
+    background-color: #14213D;
+    box-shadow: 5px 5px 20px black;
+    border-radius: 10px;
+    border: 3px silver outset;
+    top: 72px;
+    left: 17px;
+}
+
+#dados1 h2 {
+    color: white;
+    position: relative;
+    text-align: center;
+    left: -5px;
+    padding-top: 10px;
+    text-decoration: underline;
+    text-shadow: 3px 3px 15px black;
+}
+
+.inputsDados {
+    background-color: white;
+    position: relative;
+    width: 100px;
+    height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    border: 3px silver inset;
+    border-radius: 4px;
+}
+
+#dados1 select {
+    padding-left: 20px;
+    background-color: white;
+
+}
+
+#dados1 p {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#result {
+    position: relative;
+    background-color: white;
+    color: black;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    padding-top: 1px;
+    border: 3px silver inset;
+}
+
+#Bt {
+    position: relative;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    top: 10px;
+    left: 0px;
+    width: 80px;
+    height: 25px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+#Bt:hover {
+    background-color: rgb(90, 140, 231);
+    font-weight: bold;
+}
+
+#dados2 {
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    top: 75px;
+    left: 380px;
+    width: 400px;
+    height: 600px;
+    padding-left: 15px;
+}
+
+#dados2 p {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#dados2:hover {
+    background-color: #14213D;
+    color: white;
+    box-shadow: 5px 5px 20px black;
+    border-radius: 10px;
+    border: 3px silver outset;
+    top: 72px;
+    left: 377px;
+}
+
+#dados2 h2 {
+    color: white;
+    position: relative;
+    text-align: center;
+    margin: 0px;
+    left: -5px;
+    padding-left: 0px;
+    padding-top: 10px;
+    text-decoration: underline;
+    text-shadow: 5px 5px 15px black;
+}
+
+#valorDia1 {
+    position: absolute;
+    top: 75px;
+    left: 178px;
+    width: 140px;
+    height: 60px;
+    text-align: right;
+}
+
+#valorDia2 {
+    color: black;
+    position: relative;
+    float: right;
+}
+
+#data1 {
+    width: 135px;
+}
+
+#data2 {
+    width: 135px;
+}
+
+#result2 {
+    width: 360px;
+    height: 25px;
+    text-align: left;
+    padding-left: 5px;
+    color: black;
+}
+
+#Bt2 {
+    position: relative;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    top: 5px;
+    left: 0px;
+    width: 80px;
+    height: 25px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+#Bt2:hover {
+    background-color: rgb(90, 140, 231);
+    font-weight: bold;
+}
+
+#dados3 {
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    top: 75px;
+    left: 800px;
+    width: 400px;
+    height: 600px;
+    padding-left: 15px;
+}
+
+#dados3:hover {
+    background-color: #14213D;
+    color: white;
+    box-shadow: 5px 5px 20px black;
+    border-radius: 10px;
+    border: 3px silver outset;
+    top: 72px;
+    left: 797px;
+}
+
+#fieldset1 {
+    width: 330px;
+    height: 110px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+#fieldset1 input, label {
+    position: relative;
+    top: 15px;
+    left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+legend {
+    color: white;
+    font-size: 24px;
+    text-shadow: 5px 5px 15px black;
+
+}
+
+#Bt3 {
+    position: absolute;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    top: 130px;
+    left: 20px;
+    width: 160px;
+    height: 25px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+#Bt3:hover {
+    background-color: rgb(90, 140, 231);
+    font-weight: bold;
+}
+
+#resultadoMemo {
+    position: relative;
+    top: 35px;
+    left: 5px;
+    width: 335px;
+    height: 300px;
+    border: 3px silver inset;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#resultadoMemo {
+    display: none;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="_css/calcretcontrole.css">
+    <link rel="shortcut icon" href="/_img/calc1522506.png" type="image/x-icon">
+    <title>Calculadoras Controle</title>
+    <script>
+        //alert("Verificar pimeiro se o (a) cliente está fidelizado (a) antes de realizar alguma oferta!");
+    </script>
+</head>
+<body>
+    <div id="geral">
+        <div id="cabeçalho">
+            <h1>CALCULADORA RETENÇÃO CLARO CONTROLE - E2E</h1>
+        </div>
+        <div id="dados1">
+            <h2>CALCULAR DESCONTO</h2>
+            <br><br>
+            <p>VALOR DO PLANO <i>(sem desconto)</i></p>
+            <p><input type="number" id="valorPlano" class="inputsDados" placeholder=" 0,00" title="Valor do plano sem desconto"></p>
+            <br>
+            <p>DESCONTO EM PORCETAGEM (%)</p>
+            <p><select id="a-descontoPorcentagem" class="inputsDados"  title="Oferta antiga ou a primeira">
+                <option id="a-desc0" value="0" selected>  </option>
+                <option id="a-desc5" value="5">5%</option>
+                <option id="a-desc10" value="10">10%</option>
+                <option id="a-desc15" value="15">15%</option>
+                <option id="a-desc20" value="20">20%</option>
+                <option id="a-desc25" value="25">25%</option>
+                <option id="a-desc30" value="30">30%</option>
+                <option id="a-desc35" value="35">35%</option>
+                <option id="a-desc40" value="40">40%</option>
+            </select> 
+            +
+            <select id="b-descontoPorcentagem" class="inputsDados" title="Segunda oferta caso tenha alguma outra">
+                <option id="a-desc0" value="0" selected>  </option>
+                <option id="a-desc5" value="5">5%</option>
+                <option id="a-desc10" value="10">10%</option>
+                <option id="a-desc15" value="15">15%</option>
+                <option id="a-desc20" value="20">20%</option>
+                <option id="a-desc25" value="25">25%</option>
+                <option id="a-desc30" value="30">30%</option>
+                <option id="a-desc35" value="35">35%</option>
+                <option id="a-desc40" value="40">40%</option>
+            </select></p>
+            <br>
+            <p>DESCONTO EM REAIS (R$)</p>
+            <p><input type="number" id="a-descontoReais" class="inputsDados" placeholder=" 0,00" title="Desconto Relacionamento (caso tenha)"> + <input type="number" id="b-descontoReais" class="inputsDados" placeholder=" 0,00" title="Débito Automático (caso tenha)"></p>
+            <br>
+            <p>VALOR FINAL <i>(com os descontos)</i></p>
+            <div id="result" title="O valor do plano aparecerá após clicar no botão abaixo">
+                
+            </div>
+            <input type="button" id="Bt" value="Calcular" onclick="calcular()">
+        </div>
+
+        <div id="dados2">
+            <h2>CALCULAR PRÓ-RATA</h2>
+            <br><br>
+            <p>VALOR DO PLANO</p>
+            <p><input type="number" id="valorPlano2" class="inputsDados" placeholder=" 0,00" title="O valor cheio que viria no ciclo completo"></p>
+            <div id="valorDia1">
+                <p>VALOR POR DIA</p>
+                <p><div id="valorDia2" class="inputsDados" title="Irá aparecer ao preencher tudo e clicar em calcular">
+                    <h2></h2>
+                </div></p>
+            </div>
+            <br>
+            <p>PERÍODO DE USO</p>
+            <p><input type="date" id="data1" class="inputsDados" title="Início"> até <input type="date" id="data2" class="inputsDados" title="Fim"></p>
+            <br>
+            <p>VALOR COBRADO EM FATURA</p>
+            <P><input type="number" id="valorCobradoPlano" class="inputsDados" placeholder=" 0,00" title="Valor reclamado, que veio cobrando em fatura"></p>
+            <br>
+            <p>RESULTADO</p>
+            <p><div id="result2" class="inputsDados">
+                
+            </div></p>
+            <input type="button" id="Bt2" value="Calcular" onclick="calcular2()">
+        </div>
+
+        <div id="dados3">
+            <fieldset id="fieldset1">
+                <legend>&nbsp; <span style="text-decoration: underline;">CLIENTE RETIDO COM:</span>&nbsp;&nbsp;</legend>
+                <input type="radio" id="arg" name="retido" value="argumentação">
+                <label>Argumentação</label><br>
+                <input type="radio" id="offer" name="retido" value="oferta">
+                <label>Oferta</label><br>
+            </fieldset>
+
+            <p><input type="button" id="Bt3" value="GERAR MEMORANDO" onclick="gerarMemo1()"></p>
+            <br>
+            <p><textarea name="resultadoMemo" id="resultadoMemo"></textarea></p>
+
+        </div>
+    </div>
+
+    <script src="/_js/descontocontrole.js"></script>
+    <script src="/_js/proratacontrole.js"></script>
+</body>
+</html>
