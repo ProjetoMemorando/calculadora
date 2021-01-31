@@ -9,7 +9,8 @@
 
 #geral {
     position: absolute;
-    background-color: #FCA311; 
+    /* background-color: #FCA311;  */
+    background-color: brown;
     width: 100%;
     min-width: 1210px;
     height: 100%;
@@ -18,9 +19,8 @@
 
 #cabeçalho {
     position: absolute;
-    /* background-color: #E5E5E5; */
-    background-color: brown;
-    color: white;
+    background-color: #E5E5E5;
+    color: black;
     width: 99.5%;
     height: 55px;
     padding-top: 4px;
@@ -33,7 +33,7 @@
 
 #dados1 {
     position: absolute;
-    color: black;
+    color: white;
     font-weight: bold;
     top: 75px;
     left: 20px;
@@ -89,7 +89,7 @@
 #result {
     position: relative;
     background-color: white;
-    color: black;
+    color: white;
     width: 100px;
     height: 25px;
     text-align: center;
@@ -117,7 +117,7 @@
 
 #dados2 {
     position: absolute;
-    color: black;
+    color: white;
     font-weight: bold;
     top: 75px;
     left: 380px;
@@ -232,6 +232,7 @@
 }
 
 #fieldset1 input, label {
+    color: white;
     position: relative;
     top: 15px;
     left: 5px;
