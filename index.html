@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="calcretcontrole.css">
-    <link rel="shortcut icon" href="calc1522506.png" type="image/x-icon">
+    <link rel="stylesheet" href="_css/calcretcontrole.css">
+    <link rel="shortcut icon" href="/_img/calc1522506.png" type="image/x-icon">
     <title>Calculadoras Controle</title>
     <script>
         //alert("Verificar pimeiro se o (a) cliente está fidelizado (a) antes de realizar alguma oferta!");
@@ -24,25 +24,19 @@
             <p>DESCONTO EM PORCETAGEM (%)</p>
             <p><select id="a-descontoPorcentagem" class="inputsDados"  title="Oferta antiga ou a primeira">
                 <option id="a-desc0" value="0" selected>  </option>
-                <option id="a-desc5" value="5">5%</option>
                 <option id="a-desc10" value="10">10%</option>
                 <option id="a-desc15" value="15">15%</option>
                 <option id="a-desc20" value="20">20%</option>
-                <option id="a-desc25" value="25">25%</option>
                 <option id="a-desc30" value="30">30%</option>
-                <option id="a-desc35" value="35">35%</option>
                 <option id="a-desc40" value="40">40%</option>
             </select> 
             +
             <select id="b-descontoPorcentagem" class="inputsDados" title="Segunda oferta caso tenha alguma outra">
                 <option id="a-desc0" value="0" selected>  </option>
-                <option id="a-desc5" value="5">5%</option>
                 <option id="a-desc10" value="10">10%</option>
                 <option id="a-desc15" value="15">15%</option>
                 <option id="a-desc20" value="20">20%</option>
-                <option id="a-desc25" value="25">25%</option>
                 <option id="a-desc30" value="30">30%</option>
-                <option id="a-desc35" value="35">35%</option>
                 <option id="a-desc40" value="40">40%</option>
             </select></p>
             <br>
@@ -60,7 +54,7 @@
             <h2>CALCULAR PRÓ-RATA</h2>
             <br><br>
             <p>VALOR DO PLANO</p>
-            <p><input type="number" id="valorPlano2" class="inputsDados" placeholder=" 0,00" title="O valor cheio que viria no ciclo completo"></p>
+            <p><input type="number" id="valorPlano2" class="inputsDados" placeholder=" 0,00" title="O valor cheio que viria no"></p>
             <div id="valorDia1">
                 <p>VALOR POR DIA</p>
                 <p><div id="valorDia2" class="inputsDados" title="Irá aparecer ao preencher tudo e clicar em calcular">
@@ -95,9 +89,13 @@
             <p><textarea name="resultadoMemo" id="resultadoMemo"></textarea></p>
 
         </div>
+
+        <div id="nomes">
+            <b>Criado por:</b> <i>Valdeson dos Santos, Gidevan Souza, Yuri Dias <b>#ForaIride</b></i>
+        </div>
     </div>
 
-    <script src="descontocontrole.js"></script>
-    <script src="proratacontrole.js"></script>
+    <script src="/_js/descontocontrole.js"></script>
+    <script src="/_js/proratacontrole.js"></script>
 </body>
 </html>
