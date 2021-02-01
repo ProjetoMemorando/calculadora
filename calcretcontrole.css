@@ -89,7 +89,7 @@
 #result {
     position: relative;
     background-color: white;
-    color: white;
+    color: black;
     width: 100px;
     height: 25px;
     text-align: center;
@@ -277,4 +277,12 @@ legend {
 
 #resultadoMemo {
     display: none;
+}
+
+#nomes {
+    position: absolute;
+    float: right;
+    color: white;
+    bottom: 5px;
+    right: 10px;
 }
