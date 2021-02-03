@@ -70,7 +70,7 @@ function gerarMemo1() {
     }
 
     else {
-        document.getElementById("resultadoMemo").value = `Cliente retido com oferta de ${value1}% + ${value2}% + R$ ${descontoReais1} + R$ ${descontoReais1} do débito automático (caso tenha), ficando no valor de ${calcFinalAgoraVai}, cliente ciente da fidelidade por 12 meses.`;
+        document.getElementById("resultadoMemo").value = `Cliente retido com oferta de ${value1}% + ${value2}% + R$ ${descontoReais1} + R$ ${descontoReais2} do débito automático (caso tenha), ficando no valor de ${calcFinalAgoraVai}, cliente ciente da fidelidade por 12 meses.`;
     }
 
     document.getElementById("resultadoMemo").style.display = "block";
