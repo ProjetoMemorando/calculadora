@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
     <link rel="stylesheet" href="calcretcontrole.css">
     <link rel="shortcut icon" href="calc1522506.png" type="image/x-icon">
     <title>Calculadoras Controle</title>
@@ -47,32 +48,24 @@
             <div id="result" title="O valor do plano aparecerá após clicar no botão abaixo">
                 
             </div>
-            <input type="button" id="Bt" value="Calcular" onclick="calcular()">
+            <button class="btn btn-primary" id="Bt" onclick="calcular()" type="button">Calcular</button>
         </div>
 
         <div id="dados2">
-            <h2>CALCULAR PRÓ-RATA</h2>
+            <h2>INFORMATIVO</h2>
             <br><br>
-            <p>VALOR DO PLANO</p>
-            <p><input type="number" id="valorPlano2" class="inputsDados" placeholder=" 0,00" title="O valor cheio que viria no"></p>
-            <div id="valorDia1">
-                <p>VALOR POR DIA</p>
-                <p><div id="valorDia2" class="inputsDados" title="Irá aparecer ao preencher tudo e clicar em calcular">
-                    <h2></h2>
-                </div></p>
-            </div>
-            <br>
-            <p>PERÍODO DE USO</p>
-            <p><input type="date" id="data1" class="inputsDados" title="Início"> até <input type="date" id="data2" class="inputsDados" title="Fim"></p>
-            <br>
-            <p>VALOR COBRADO EM FATURA</p>
-            <P><input type="number" id="valorCobradoPlano" class="inputsDados" placeholder=" 0,00" title="Valor reclamado, que veio cobrando em fatura"></p>
-            <br>
-            <p>RESULTADO</p>
-            <p><div id="result2" class="inputsDados">
-                
-            </div></p>
-            <input type="button" id="Bt2" value="Calcular" onclick="calcular2()">
+            <p><b>Combo Multi NET</b> <i>0800 723 6626</i></p>
+            <p><b>Claro TV/Combo Multi Claro</b> <i>106 21</i></p>
+            <p><b>Claro Fixo</b> <i>103 21</i></p>
+            <p><b>Roaming Internacional</b> <i>*468</i></p>
+            <p><b>Tarifação do Roaming Internacional</b> <i>0800 790 1021</i></p>
+            <p><b>Proteção Móvel</b> <i>0800 591 7055 (das 7:00 às 23:00)</i></p>
+            <p><b>SAC Inbursa</b> <i>11 3030 4444 / 0800 641 4444</i></p>            
+            <p><b>Angência de Cobrança</b> <i>0800 208 8080 ou 3003 8080</i></p> 
+            <p><b>Televendas</b> <i>0800 720 1234</i></p>
+            <p><b>WhatsApp da Claro</b> <i>(11) 9999-10621</i></p>
+            <p><b>Vendas NET</b> <i>4004 8844</i></p>
+            <p><b>Vendas via WhatsApp</b> <i>(11) 9 3200-2121</i></p>
         </div>
 
         <div id="dados3">
@@ -83,8 +76,7 @@
                 <input type="radio" id="offer" name="retido" value="oferta">
                 <label>Oferta</label><br>
             </fieldset>
-
-            <p><input type="button" id="Bt3" value="GERAR MEMORANDO" onclick="gerarMemo1()"></p>
+            <p><button class="btn btn-primary" id="Bt3" onclick="gerarMemo1()" type="button">Gerar Memorando</button></p>
             <br>
             <p><textarea name="resultadoMemo" id="resultadoMemo"></textarea></p>
 
