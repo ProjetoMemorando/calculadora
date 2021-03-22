@@ -111,6 +111,7 @@
     border-radius: 40px;
     font-size: 14px;
     transition: 0.5s;
+    z-index: 1;
 }
 
 #dados2:hover {
@@ -346,4 +347,5 @@ img:hover {
     border-radius: 7px 0px 0px 7px;
     box-shadow: 10px 10px 50px;
     transition: 1s;
+    z-index: 2;
 }
