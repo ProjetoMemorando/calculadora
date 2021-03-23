@@ -178,7 +178,7 @@
 @media (min-width: 1281px) {
     #geral {
         position: absolute;
-        background-color: green;
+        background-color: brown;
         width: 100%;
         height: 100%;
     }
@@ -346,7 +346,7 @@
 @media (min-width: 1366px) {
     #geral {
         position: absolute;
-        background-color: gray;
+        background-color: brown;
         width: 100%;
         height: 100%;
     }
@@ -514,7 +514,7 @@
 @media (min-width: 1440px) {
     #geral {
         position: absolute;
-        background-color: greenyellow;
+        background-color: brown;
         width: 100%;
         height: 100%;
     }
@@ -682,7 +682,7 @@
 @media (min-width: 1600px) {
     #geral {
         position: absolute;
-        background-color: indigo;
+        background-color: brown;
         width: 100%;
         height: 100%;
     }
@@ -1019,5 +1019,3 @@ legend {
     position: relative;
     top: 20px;
 }
-
-/* ============================================================================================================= */
