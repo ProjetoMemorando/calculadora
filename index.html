@@ -14,15 +14,15 @@
 <body>
     <div id="geral">
         <div id="cabeçalho">
-            <h1>CALCULADORA RETENÇÃO CLARO CONTROLE - E2E</h1>
+            <h1>RETENÇÃO CONTROLE | CALCULADORA & INFORMATIVO</h1>
         </div>
         <div id="dados1">
             <h2>CALCULAR DESCONTO</h2>
             <br><br>
-            <p>VALOR DO PLANO <i>(sem desconto)</i></p>
+            <p>Valor do plano <i>(sem desconto)</i></p>
             <p><input type="number" id="valorPlano" class="inputsDados" placeholder=" 0,00" title="Valor do plano sem desconto"></p>
             <br>
-            <p>DESCONTO EM PORCETAGEM (%)</p>
+            <p>Desconto em porcentagem (%)</p>
             <p><select id="a-descontoPorcentagem" class="inputsDados"  title="Oferta antiga ou a primeira">
                 <option id="a-desc0" value="0" selected>  </option>
                 <option id="a-desc10" value="10">10%</option>
@@ -41,10 +41,10 @@
                 <option id="a-desc40" value="40">40%</option>
             </select></p>
             <br>
-            <p>DESCONTO EM REAIS (R$)</p>
+            <p>Desconto em reais (R$)</p>
             <p><input type="number" id="a-descontoReais" class="inputsDados" placeholder=" 0,00" title="Desconto Relacionamento (caso tenha)"> + <input type="number" id="b-descontoReais" class="inputsDados" placeholder=" 0,00" title="Débito Automático (caso tenha)"></p>
             <br>
-            <p>VALOR FINAL <i>(com os descontos)</i></p>
+            <p>Valor final <i>(com os descontos)</i></p>
             <div id="result" title="O valor do plano aparecerá após clicar no botão abaixo">
                 
             </div>
@@ -52,6 +52,20 @@
         </div>
 
         <div id="dados2">
+            <fieldset id="fieldset1">
+                <legend>&nbsp; <span style="text-decoration: underline;">CLIENTE RETIDO COM:</span>&nbsp;&nbsp;</legend>
+                <input type="radio" id="arg" name="retido" value="argumentação">
+                <label>Argumentação</label><br>
+                <input type="radio" id="offer" name="retido" value="oferta">
+                <label>Oferta</label><br>
+            </fieldset>
+            <p><button class="btn btn-primary" id="Bt3" onclick="gerarMemo1()" type="button">Gerar Memorando</button></p>
+            <br>
+            <p><textarea name="resultadoMemo" id="resultadoMemo"></textarea></p>
+
+        </div>
+
+        <div id="dados3">
             <h2>INFORMATIVO</h2>
             <br><br>
             <p><b>Combo Multi NET</b> <i>0800 723 6626</i></p>
@@ -69,20 +83,6 @@
             <p><b>Vendas via WhatsApp</b> <i>(11) 9 3200-2121</i></p><br/>
             <p><b>Ouvidoria NET/Claro TV/Combo Multi NET/Claro</b><br/> <i>0800 701 0180</i></p>
             <p><b>Ouvidoria Embratel/Claro Fixo/Nextel/Claro Móvel</b><br/> <i>0800 020 0200</i></p>
-        </div>
-
-        <div id="dados3">
-            <fieldset id="fieldset1">
-                <legend>&nbsp; <span style="text-decoration: underline;">CLIENTE RETIDO COM:</span>&nbsp;&nbsp;</legend>
-                <input type="radio" id="arg" name="retido" value="argumentação">
-                <label>Argumentação</label><br>
-                <input type="radio" id="offer" name="retido" value="oferta">
-                <label>Oferta</label><br>
-            </fieldset>
-            <p><button class="btn btn-primary" id="Bt3" onclick="gerarMemo1()" type="button">Gerar Memorando</button></p>
-            <br>
-            <p><textarea name="resultadoMemo" id="resultadoMemo"></textarea></p>
-
         </div>
         
         <img src="Plano.png">
