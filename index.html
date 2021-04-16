@@ -11,6 +11,87 @@
     </script>
 </head>
 <body>
-    <h1> EM MANUTENÇÃO, AGUARDE! </h1>
+    <div id="geral">
+        <div id="cabeçalho">
+            <h1>RETENÇÃO CONTROLE | CALCULADORA & INFORMATIVO</h1>
+        </div>
+        <div id="dados1">
+            <h2>CALCULAR DESCONTO</h2>
+            <br><br>
+            <p>Valor do plano <i>(sem desconto)</i></p>
+            <p><input type="number" id="valorPlano" class="inputsDados" placeholder=" 0,00" title="Valor do plano sem desconto"></p>
+            <br>
+            <p>Desconto em porcentagem (%)</p>
+            <p><select id="a-descontoPorcentagem" class="inputsDados"  title="Oferta antiga ou a primeira">
+                <option id="a-desc0" value="0" selected>  </option>
+                <option id="a-desc10" value="10">10%</option>
+                <option id="a-desc15" value="15">15%</option>
+                <option id="a-desc20" value="20">20%</option>
+                <option id="a-desc30" value="30">30%</option>
+                <option id="a-desc40" value="40">40%</option>
+            </select> 
+            +
+            <select id="b-descontoPorcentagem" class="inputsDados" title="Segunda oferta caso tenha alguma outra">
+                <option id="a-desc0" value="0" selected>  </option>
+                <option id="a-desc10" value="10">10%</option>
+                <option id="a-desc15" value="15">15%</option>
+                <option id="a-desc20" value="20">20%</option>
+                <option id="a-desc30" value="30">30%</option>
+                <option id="a-desc40" value="40">40%</option>
+            </select></p>
+            <br>
+            <p>Desconto em reais (R$)</p>
+            <p><input type="number" id="a-descontoReais" class="inputsDados" placeholder=" 0,00" title="Desconto Relacionamento (caso tenha)"> + <input type="number" id="b-descontoReais" class="inputsDados" placeholder=" 0,00" title="Débito Automático (caso tenha)"></p>
+            <br>
+            <p>Valor final <i>(com os descontos)</i></p>
+            <div id="result" title="O valor do plano aparecerá após clicar no botão abaixo">
+                
+            </div>
+            <button class="btn btn-primary" id="Bt" onclick="calcular()" type="button">Calcular</button>
+        </div>
+
+        <div id="dados2">
+            <fieldset id="fieldset1">
+                <legend>&nbsp; <span style="text-decoration: underline;">CLIENTE RETIDO COM:</span>&nbsp;&nbsp;</legend>
+                <input type="radio" id="arg" name="retido" value="argumentação">
+                <label>Argumentação</label><br>
+                <input type="radio" id="offer" name="retido" value="oferta">
+                <label>Oferta</label><br>
+            </fieldset>
+            <p><button class="btn btn-primary" id="Bt3" onclick="gerarMemo1()" type="button">Gerar Memorando</button></p>
+            <br>
+            <p><textarea name="resultadoMemo" id="resultadoMemo"></textarea></p>
+
+        </div>
+
+        <div id="dados3">
+            <h2>INFORMATIVO</h2>
+            <br><br>
+            <p><b>Combo Multi NET</b> <i>0800 723 6626</i></p>
+            <p><b>Claro TV/Combo Multi Claro</b> <i>106 99</i></p>
+            <p><b>SAC NET</b> <i>106 21</i></p>
+            <p><b>Claro Fixo</b> <i>103 21</i></p>
+            <p><b>Roaming Internacional</b> <i>*468</i></p>
+            <p><b>Tarifação do Roaming Internacional</b> <i>0800 790 1021</i></p>
+            <p><b>Proteção Móvel</b> <i>0800 591 7055 (das 7:00 às 23:00)</i></p>
+            <p><b>SAC Inbursa</b> <i>11 3030 4444 / 0800 641 4444</i></p>            
+            <p><b>Angência de Cobrança</b> <i>0800 208 8080 ou 3003 8080</i></p> 
+            <p><b>Televendas</b> <i>0800 720 1234</i></p>
+            <p><b>WhatsApp da Claro</b> <i>(11) 9999-10621</i></p>
+            <p><b>Vendas NET</b> <i>4004 8844</i></p>
+            <p><b>Vendas via WhatsApp</b> <i>(11) 9 3200-2121</i></p><br/>
+            <p><b>Ouvidoria NET/Claro TV/Combo Multi NET/Claro</b><br/> <i>0800 701 0180</i></p>
+            <p><b>Ouvidoria Embratel/Claro Fixo/Nextel/Claro Móvel</b><br/> <i>0800 020 0200</i></p>
+        </div>
+        
+        <img src="Plano.png">
+        
+        <div id="nomes">
+            <b>Criado por:</b> <i>Valdeson dos Santos, Gidevan Souza, Yuri Dias</i>
+        </div>
+    </div>
+
+    <script src="descontocontrole.js"></script>
+    <script src="proratacontrole.js"></script>
 </body>
 </html>
