@@ -70,7 +70,7 @@
         font-weight: bold;
         top: 75px;
         left: 280px;
-        width: 350px;
+        width: 320px;
         height: 500px;
         padding-left: 15px;
         transition: 0.5s;
@@ -88,7 +88,7 @@
     }
 
     #fieldset1 {
-        width: 300px;
+        width: 280px;
         height: 110px;
         margin-top: 10px;
         margin-left: 5px;
@@ -107,8 +107,8 @@
         position: relative;
         top: 35px;
         left: -2px;
-        width: 320px;
-        height: 300px;
+        width: 285px;
+        height: 260px;
         border: 3px silver inset;
         font-family: Arial, Helvetica, sans-serif;
     }
@@ -118,9 +118,9 @@
         background-color: white;
         color: black;
         top: 75px;
-        left: 640px;
+        left: 910px;
         width: 340px;
-        height: 500px;
+        height: 490px;
         padding-left: 15px;
         border-radius: 40px;
         font-size: 14px;
@@ -130,9 +130,9 @@
     #dados3:hover {
         box-shadow: 5px 5px 10px;
         top: 72.5px;
-        left: 637px;
+        left: 910px;
         width: 350px;
-        height: 605px;
+        height: 500px;
         transition: 0.5s;
         font-size: 14px;
     }
@@ -150,26 +150,38 @@
         text-align: center;
     }
 
-    img {
+    #dados4 {
         position: absolute;
-        top: 80px;
-        left: 995px;
-        width: 280px;
-        height: 400px;
-        border-radius: 7px 0px 0px 7px;
-        border: 5px silver inset;
-        transition: 1s;
+        color: white;
+        font-weight: bold;
+        top: 75px;
+        left: 610px;
+        width: 290px;
+        height: 500px;
+        padding-left: 15px;
+        transition: 0.5s;
+    }
+
+    #dados4 h2 {
+        color: white;
+        position: relative;
+        text-align: center;
+        left: -7px;
+        padding-top: 10px;
+        text-decoration: underline;
+        text-shadow: 3px 3px 15px black;
+        font-size: 19px;
     }
     
-    img:hover {
-        position: absolute;
-        top: 75px;
-        left: 855px;
-        width: 400px;
-        height: 500px;
-        border-radius: 7px 0px 0px 7px;
-        box-shadow: 10px 10px 50px;
-        transition: 1s;
+    #dados4:hover {
+        background-color: #14213D;
+        color: white;
+        box-shadow: 5px 5px 20px black;
+        border-radius: 10px;
+        border: 3px silver outset;
+        top: 72px;
+        left: 607px;
+        transition: 0.5s;
     }
 
 }
@@ -238,7 +250,7 @@
         font-weight: bold;
         top: 75px;
         left: 280px;
-        width: 350px;
+        width: 320px;
         height: 500px;
         padding-left: 15px;
         transition: 0.5s;
@@ -256,7 +268,7 @@
     }
 
     #fieldset1 {
-        width: 300px;
+        width: 280px;
         height: 110px;
         margin-top: 10px;
         margin-left: 5px;
@@ -275,8 +287,8 @@
         position: relative;
         top: 35px;
         left: -2px;
-        width: 320px;
-        height: 300px;
+        width: 285px;
+        height: 260px;
         border: 3px silver inset;
         font-family: Arial, Helvetica, sans-serif;
     }
@@ -286,9 +298,9 @@
         background-color: white;
         color: black;
         top: 75px;
-        left: 640px;
+        left: 910px;
         width: 340px;
-        height: 500px;
+        height: 490px;
         padding-left: 15px;
         border-radius: 40px;
         font-size: 14px;
@@ -298,9 +310,9 @@
     #dados3:hover {
         box-shadow: 5px 5px 10px;
         top: 72.5px;
-        left: 637px;
+        left: 910px;
         width: 350px;
-        height: 505px;
+        height: 500px;
         transition: 0.5s;
         font-size: 14px;
     }
@@ -318,26 +330,38 @@
         text-align: center;
     }
 
-    img {
+    #dados4 {
         position: absolute;
-        top: 80px;
-        left: 990px;
-        width: 360px;
-        height: 480px;
-        border-radius: 7px 0px 0px 7px;
-        border: 5px silver inset;
-        transition: 1s;
+        color: white;
+        font-weight: bold;
+        top: 75px;
+        left: 610px;
+        width: 290px;
+        height: 500px;
+        padding-left: 15px;
+        transition: 0.5s;
+    }
+
+    #dados4 h2 {
+        color: white;
+        position: relative;
+        text-align: center;
+        left: -7px;
+        padding-top: 10px;
+        text-decoration: underline;
+        text-shadow: 3px 3px 15px black;
+        font-size: 19px;
     }
     
-    img:hover {
-        position: absolute;
-        top: 75px;
-        left: 850px;
-        width: 500px;
-        height: 520px;
-        border-radius: 7px 0px 0px 7px;
-        box-shadow: 10px 10px 50px;
-        transition: 1s;
+    #dados4:hover {
+        background-color: #14213D;
+        color: white;
+        box-shadow: 5px 5px 20px black;
+        border-radius: 10px;
+        border: 3px silver outset;
+        top: 72px;
+        left: 607px;
+        transition: 0.5s;
     }
 
 }
@@ -406,7 +430,7 @@
         font-weight: bold;
         top: 75px;
         left: 280px;
-        width: 350px;
+        width: 320px;
         height: 500px;
         padding-left: 15px;
         transition: 0.5s;
@@ -424,7 +448,7 @@
     }
 
     #fieldset1 {
-        width: 300px;
+        width: 280px;
         height: 110px;
         margin-top: 10px;
         margin-left: 5px;
@@ -443,8 +467,8 @@
         position: relative;
         top: 35px;
         left: -2px;
-        width: 320px;
-        height: 300px;
+        width: 285px;
+        height: 260px;
         border: 3px silver inset;
         font-family: Arial, Helvetica, sans-serif;
     }
@@ -454,7 +478,7 @@
         background-color: white;
         color: black;
         top: 75px;
-        left: 640px;
+        left: 910px;
         width: 340px;
         height: 500px;
         padding-left: 15px;
@@ -466,7 +490,7 @@
     #dados3:hover {
         box-shadow: 5px 5px 10px;
         top: 72.5px;
-        left: 637px;
+        left: 910px;
         width: 350px;
         height: 505px;
         transition: 0.5s;
@@ -486,26 +510,38 @@
         text-align: center;
     }
 
-    img {
+    #dados4 {
         position: absolute;
-        top: 80px;
-        left: 990px;
-        width: 440px;
+        color: white;
+        font-weight: bold;
+        top: 75px;
+        left: 610px;
+        width: 290px;
         height: 500px;
-        border-radius: 7px 0px 0px 7px;
-        border: 5px silver inset;
-        transition: 1s;
+        padding-left: 15px;
+        transition: 0.5s;
+    }
+
+    #dados4 h2 {
+        color: white;
+        position: relative;
+        text-align: center;
+        left: -7px;
+        padding-top: 10px;
+        text-decoration: underline;
+        text-shadow: 3px 3px 15px black;
+        font-size: 19px;
     }
     
-    img:hover {
-        position: absolute;
-        top: 75px;
-        left: 930px;
-        width: 500px;
-        height: 500px;
-        border-radius: 7px 0px 0px 7px;
-        box-shadow: 10px 10px 50px;
-        transition: 1s;
+    #dados4:hover {
+        background-color: #14213D;
+        color: white;
+        box-shadow: 5px 5px 20px black;
+        border-radius: 10px;
+        border: 3px silver outset;
+        top: 72px;
+        left: 607px;
+        transition: 0.5s;
     }
 
 }
@@ -574,7 +610,7 @@
         font-weight: bold;
         top: 75px;
         left: 280px;
-        width: 350px;
+        width: 320px;
         height: 500px;
         padding-left: 15px;
         transition: 0.5s;
@@ -592,7 +628,7 @@
     }
 
     #fieldset1 {
-        width: 300px;
+        width: 280px;
         height: 110px;
         margin-top: 10px;
         margin-left: 5px;
@@ -611,8 +647,8 @@
         position: relative;
         top: 35px;
         left: -2px;
-        width: 320px;
-        height: 300px;
+        width: 285px;
+        height: 260px;
         border: 3px silver inset;
         font-family: Arial, Helvetica, sans-serif;
     }
@@ -622,7 +658,7 @@
         background-color: white;
         color: black;
         top: 75px;
-        left: 640px;
+        left: 910px;
         width: 340px;
         height: 500px;
         padding-left: 15px;
@@ -634,7 +670,7 @@
     #dados3:hover {
         box-shadow: 5px 5px 10px;
         top: 72.5px;
-        left: 637px;
+        left: 910px;
         width: 350px;
         height: 505px;
         transition: 0.5s;
@@ -654,26 +690,38 @@
         text-align: center;
     }
 
-    img {
+    #dados4 {
         position: absolute;
-        top: 80px;
-        left: 995px;
-        width: 470px;
-        height: 600px;
-        border-radius: 7px 0px 0px 7px;
-        border: 5px silver inset;
-        transition: 1s;
+        color: white;
+        font-weight: bold;
+        top: 75px;
+        left: 610px;
+        width: 290px;
+        height: 500px;
+        padding-left: 15px;
+        transition: 0.5s;
+    }
+
+    #dados4 h2 {
+        color: white;
+        position: relative;
+        text-align: center;
+        left: -7px;
+        padding-top: 10px;
+        text-decoration: underline;
+        text-shadow: 3px 3px 15px black;
+        font-size: 19px;
     }
     
-    img:hover {
-        position: absolute;
-        top: 77px;
-        left: 995px;
-        width: 470px;
-        height: 600px;
-        border-radius: 7px 0px 0px 7px;
-        box-shadow: 10px 10px 50px;
-        transition: 1s;
+    #dados4:hover {
+        background-color: #14213D;
+        color: white;
+        box-shadow: 5px 5px 20px black;
+        border-radius: 10px;
+        border: 3px silver outset;
+        top: 72px;
+        left: 607px;
+        transition: 0.5s;
     }
 
 }
@@ -790,7 +838,7 @@
         background-color: white;
         color: black;
         top: 75px;
-        left: 640px;
+        left: 1010px;
         width: 340px;
         height: 600px;
         padding-left: 15px;
@@ -802,7 +850,7 @@
     #dados3:hover {
         box-shadow: 5px 5px 10px;
         top: 72.5px;
-        left: 637px;
+        left: 1007px;
         width: 350px;
         height: 605px;
         transition: 0.5s;
@@ -822,26 +870,38 @@
         text-align: center;
     }
 
-    img {
+    #dados4 {
         position: absolute;
-        top: 80px;
-        left: 995px;
-        width: 470px;
+        color: white;
+        font-weight: bold;
+        top: 75px;
+        left: 640px;
+        width: 320px;
         height: 600px;
-        border-radius: 7px 0px 0px 7px;
-        border: 5px silver inset;
-        transition: 1s;
+        padding-left: 15px;
+        transition: 0.5s;
+    }
+
+    #dados4 h2 {
+        color: white;
+        position: relative;
+        text-align: center;
+        left: -7px;
+        padding-top: 10px;
+        text-decoration: underline;
+        text-shadow: 3px 3px 15px black;
+        font-size: 19px;
     }
     
-    img:hover {
-        position: absolute;
-        top: 77px;
-        left: 995px;
-        width: 470px;
-        height: 600px;
-        border-radius: 7px 0px 0px 7px;
-        box-shadow: 10px 10px 50px;
-        transition: 1s;
+    #dados4:hover {
+        background-color: #14213D;
+        color: white;
+        box-shadow: 5px 5px 20px black;
+        border-radius: 10px;
+        border: 3px silver outset;
+        top: 72px;
+        left: 637px;
+        transition: 0.5s;
     }
 
 }
@@ -857,6 +917,9 @@
     border: 3px silver inset;
 }
 
+#resultado_proprocional {
+    width: 180px;
+}
 
 .inputsDados {
     background-color: white;
@@ -885,7 +948,6 @@
 
 /* #dados3-1 {
     position: absolute;
-
 } */
 
 #valorDia1 {
