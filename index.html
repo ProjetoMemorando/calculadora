@@ -66,7 +66,7 @@
 
         <div id="dados3">
             <h2>INFORMATIVO</h2>
-            <br><br>
+            <br>
             <p><b>Combo Multi NET</b> <i>0800 723 6626</i></p>
             <p><b>Claro TV/Combo Multi Claro</b> <i>106 99</i></p>
             <p><b>SAC NET</b> <i>106 21</i></p>
@@ -83,8 +83,20 @@
             <p><b>Ouvidoria NET/Claro TV/Combo Multi NET/Claro</b><br/> <i>0800 701 0180</i></p>
             <p><b>Ouvidoria Embratel/Claro Fixo/Nextel/Claro Móvel</b><br/> <i>0800 020 0200</i></p>
         </div>
-        
-        <img src="Plano.png">
+
+        <div id="dados4">
+            <h2>CALCULAR PROPORCIONAL</h2>
+            <br><br>
+            <p>Valor cheio</p>
+            <p><input type="number" id="valor_Plano" class="inputsDados" placeholder=" 0,00" title="Valor do plano na fatura"></p>
+            <br>
+            <p>Quantos dias foi utilizado</p>
+            <p><input type="number" id="dias_utilizado" class="inputsDados" placeholder=" Qtd." title="Contando com o dia da abertura do ciclo até o último"></p>
+            <br>
+            <p>Resultado</p>
+            <p><input type="text" id="resultado_proprocional" class="inputsDados" placeholder=" Valor do ajuste" title="Resultado"></p>
+            <button class="btn btn-primary" id="Bt" onclick="calcularProRata()" type="button">Calcular</button>
+        </div>
         
         <div id="nomes">
             <b>Criado por:</b> <i>Valdeson dos Santos, Gidevan Souza, Yuri Dias</i>
