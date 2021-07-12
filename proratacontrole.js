@@ -15,10 +15,11 @@ function calcularProRata() {
     var proRata = valorPlanoCheio - conta2;
     console.log(proRata);
 
-    var valorConvert = (proRata).toLocaleString('pt-BR', { minimumFractionDigits: 3, style: 'currency', currency: 'BRL' });
-
+    var valorConvert1 = (proRata).toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' });
+	var valorConvert2 = (conta2).toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' });
     
-    document.getElementById("resultado_proprocional").value = `Ajuste de R$ ${valorConvert}`;
+    document.getElementById("resultado_proprocional").value = `Ajuste de R$ ${valorConvert1}`;
+	document.getElementById("a_pagar").value = `A pagar R$ ${valorConvert2}`;
 
     // Formato BRL + 2 casas decimais
     // R$ 1.234,50
