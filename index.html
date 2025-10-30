@@ -1,101 +1,217 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="calcretcontrole.css">
-    <link rel="shortcut icon" href="calc1522506.png" type="image/x-icon">
-    <title>Calculadoras Controle</title>
-    <script>
-        //alert("Verificar pimeiro se o (a) cliente está fidelizado (a) antes de realizar alguma oferta!");
-    </script>
-</head>
-<body>
-    <div id="geral">
-        <div id="cabeçalho">
-            <h1>CALCULADORA RETENÇÃO CLARO CONTROLE - E2E</h1>
-        </div>
-        <div id="dados1">
-            <h2>CALCULAR DESCONTO</h2>
-            <br><br>
-            <p>VALOR DO PLANO <i>(sem desconto)</i></p>
-            <p><input type="number" id="valorPlano" class="inputsDados" placeholder=" 0,00" title="Valor do plano sem desconto"></p>
-            <br>
-            <p>DESCONTO EM PORCETAGEM (%)</p>
-            <p><select id="a-descontoPorcentagem" class="inputsDados"  title="Oferta antiga ou a primeira">
-                <option id="a-desc0" value="0" selected>  </option>
-                <option id="a-desc10" value="10">10%</option>
-                <option id="a-desc15" value="15">15%</option>
-                <option id="a-desc20" value="20">20%</option>
-                <option id="a-desc30" value="30">30%</option>
-                <option id="a-desc40" value="40">40%</option>
-            </select> 
-            +
-            <select id="b-descontoPorcentagem" class="inputsDados" title="Segunda oferta caso tenha alguma outra">
-                <option id="a-desc0" value="0" selected>  </option>
-                <option id="a-desc10" value="10">10%</option>
-                <option id="a-desc15" value="15">15%</option>
-                <option id="a-desc20" value="20">20%</option>
-                <option id="a-desc30" value="30">30%</option>
-                <option id="a-desc40" value="40">40%</option>
-            </select></p>
-            <br>
-            <p>DESCONTO EM REAIS (R$)</p>
-            <p><input type="number" id="a-descontoReais" class="inputsDados" placeholder=" 0,00" title="Desconto Relacionamento (caso tenha)"> + <input type="number" id="b-descontoReais" class="inputsDados" placeholder=" 0,00" title="Débito Automático (caso tenha)"></p>
-            <br>
-            <p>VALOR FINAL <i>(com os descontos)</i></p>
-            <div id="result" title="O valor do plano aparecerá após clicar no botão abaixo">
-                
-            </div>
-            <input type="button" id="Bt" value="Calcular" onclick="calcular()">
-        </div>
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>RETENÇÃO CONTROLE | CALCULADORA & INFORMATIVO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="calcretcontrole.css" />
+  </head>
+  <body>
+    <!-- Top App Bar -->
+    <header class="app-bar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">RC</div>
+        <h1 class="title">RETENÇÃO CONTROLE | CALCULADORA & INFORMATIVO</h1>
+      </div>
+      <!--
+      <div class="actions">
+        
+        <button class="icon-btn" aria-label="Notificações" title="Notificações">
+          <span class="material-symbols">notifications</span>
+        </button>
+        <div class="avatar" aria-label="Usuário"></div>
+      </div>
+      -->
+    </header>
 
-        <div id="dados2">
-            <h2>CALCULAR PRÓ-RATA</h2>
-            <br><br>
-            <p>VALOR DO PLANO</p>
-            <p><input type="number" id="valorPlano2" class="inputsDados" placeholder=" 0,00" title="O valor cheio que viria no"></p>
-            <div id="valorDia1">
-                <p>VALOR POR DIA</p>
-                <p><div id="valorDia2" class="inputsDados" title="Irá aparecer ao preencher tudo e clicar em calcular">
-                    <h2></h2>
-                </div></p>
-            </div>
-            <br>
-            <p>PERÍODO DE USO</p>
-            <p><input type="date" id="data1" class="inputsDados" title="Início"> até <input type="date" id="data2" class="inputsDados" title="Fim"></p>
-            <br>
-            <p>VALOR COBRADO EM FATURA</p>
-            <P><input type="number" id="valorCobradoPlano" class="inputsDados" placeholder=" 0,00" title="Valor reclamado, que veio cobrando em fatura"></p>
-            <br>
-            <p>RESULTADO</p>
-            <p><div id="result2" class="inputsDados">
-                
-            </div></p>
-            <input type="button" id="Bt2" value="Calcular" onclick="calcular2()">
-        </div>
+    <!-- Main Layout -->
+    <main class="container">
+      <section class="grid">
+        <!-- Card: Calcular Desconto -->
+        <article class="card" aria-labelledby="desconto-title">
+          <header class="card-header">
+            <div class="card-icon" aria-hidden="true">%</div>
+            <h2 id="desconto-title">Calcular Desconto</h2>
+          </header>
 
-        <div id="dados3">
-            <fieldset id="fieldset1">
-                <legend>&nbsp; <span style="text-decoration: underline;">CLIENTE RETIDO COM:</span>&nbsp;&nbsp;</legend>
-                <input type="radio" id="arg" name="retido" value="argumentação">
-                <label>Argumentação</label><br>
-                <input type="radio" id="offer" name="retido" value="oferta">
-                <label>Oferta</label><br>
+          <form id="form-desconto" class="card-body" novalidate>
+            <div class="field">
+              <label for="valor-plano">Valor do plano</label>
+              <div class="input-prefix">
+                <span>R$</span>
+                <input id="valor-plano" name="valorPlano" inputmode="decimal" placeholder="0,00" autocomplete="off" />
+              </div>
+              <small class="hint">Sem desconto</small>
+            </div>
+
+            <div class="field">
+              <label for="perc1">Desconto em porcentagem (%)</label>
+              <div class="row gap">
+                <div class="slider-wrap">
+                  <input id="perc1" type="range" min="0" max="100" step="1" value="0" />
+                  <output id="perc1-out">0%</output>
+                </div>
+                <div class="chips">
+                  <button type="button" class="chip" data-preset="10">10%</button>
+                  <button type="button" class="chip" data-preset="15">15%</button>
+                  <button type="button" class="chip" data-preset="20">20%</button>
+                  <button type="button" class="chip" data-preset="30">30%</button>
+                  <button type="button" class="chip" data-preset="40">40%</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="perc2">Mais um desconto (%)</label>
+              <div class="row gap">
+                <div class="slider-wrap">
+                  <input id="perc2" type="range" min="0" max="100" step="1" value="0" />
+                  <output id="perc2-out">0%</output>
+                </div>
+                <div class="chips">
+                  <button type="button" class="chip" data-preset="10">10%</button>
+                  <button type="button" class="chip" data-preset="15">15%</button>
+                  <button type="button" class="chip" data-preset="20">20%</button>
+                  <button type="button" class="chip" data-preset="30">30%</button>
+                  <button type="button" class="chip" data-preset="40">40%</button>
+                </div>
+              </div>
+              <small class="hint">Aplicado sequencialmente (composto)</small>
+            </div>
+
+            <div class="field">
+              <label for="desc-reais">Desconto em reais (R$)</label>
+              <div class="input-prefix">
+                <span>R$</span>
+                <input id="desc-reais" name="descReais" inputmode="decimal" placeholder="0,00" autocomplete="off" />
+              </div>
+            </div>
+
+            <div class="field readonly">
+              <label for="valor-final">Valor final (com os descontos)</label>
+              <div class="input-prefix readonly">
+                <span>R$</span>
+                <input id="valor-final" name="valorFinal" readonly aria-readonly="true" />
+              </div>
+            </div>
+
+            <div class="actions-row">
+              <button type="submit" class="btn primary">Calcular</button>
+              <button type="reset" class="btn ghost">Limpar</button>
+            </div>
+          </form>
+        </article>
+
+        <!-- Card: Cliente Retido -->
+        <article class="card" aria-labelledby="retido-title">
+          <header class="card-header">
+            <div class="card-icon" aria-hidden="true">✔</div>
+            <h2 id="retido-title">Cliente retido com:</h2>
+          </header>
+
+          <div class="card-body">
+            <fieldset class="fieldset">
+              <legend class="sr-only">Motivo da retenção</legend>
+              <label class="radio">
+                <input type="radio" name="retencao" value="Argumentação" checked />
+                <span>Argumentação</span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="retencao" value="Oferta" />
+                <span>Oferta</span>
+              </label>
             </fieldset>
 
-            <p><input type="button" id="Bt3" value="GERAR MEMORANDO" onclick="gerarMemo1()"></p>
-            <br>
-            <p><textarea name="resultadoMemo" id="resultadoMemo"></textarea></p>
+            <button id="btn-memorando" class="btn secondary" type="button">
+              Gerar Memorando
+            </button>
 
-        </div>
+            <div id="memorando-result" class="memorando" hidden title="Clique para copiar"></div>
+            <small id="memorando-tip" class="hint" hidden>Clique no memorando para copiar</small>
+          </div>
+        </article>
 
-        <div id="nomes">
-            <b>Criado por:</b> <i>Valdeson dos Santos, Gidevan Souza, Yuri Dias</i>
+        <!-- Card: Calcular Proporcional -->
+        <article class="card" aria-labelledby="prop-title">
+          <header class="card-header">
+            <div class="card-icon" aria-hidden="true">Σ</div>
+            <h2 id="prop-title">Calcular Proporcional</h2>
+          </header>
+
+          <form id="form-prop" class="card-body" novalidate>
+            <div class="field">
+              <label for="valor-cheio">Valor cheio</label>
+              <div class="input-prefix">
+                <span>R$</span>
+                <input id="valor-cheio" inputmode="decimal" placeholder="0,00" autocomplete="off" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="dias-util">Quantos dias foi utilizado</label>
+              <input id="dias-util" type="number" min="0" max="31" step="1" placeholder="Qtd." />
+              <small class="hint">Considera mês de 30 dias </small>
+            </div>
+
+            <div class="field two-col">
+              <div class="chip-output">
+                <span>A pagar</span>
+                <strong id="ajuste-out">R$ 0,00</strong>
+              </div>
+              <div class="chip-output">
+                <span>Valor do ajuste</span>
+                <strong id="apagar-out">R$ 0,00</strong>
+              </div>
+            </div>
+
+            <div class="actions-row">
+              <button type="submit" class="btn primary">Calcular</button>
+              <button type="reset" class="btn ghost">Limpar</button>
+            </div>
+          </form>
+        </article>
+      </section>
+
+      <!-- Sidebar Informativo -->
+      <aside class="sidebar card" aria-labelledby="info-title">
+        <header class="card-header sticky">
+          <div class="card-icon" aria-hidden="true">ℹ</div>
+          <h2 id="info-title">Informativo</h2>
+        </header>
+
+        <div class="card-body info-list">
+          <ul>
+            <li><strong>Combo Multi NET</strong> <em>0800 723 6626</em></li>
+            <li><strong>Claro TV/Combo Multi Claro</strong> <em>106 99</em></li>
+            <li><strong>SAC NET</strong> <em>106 21</em></li>
+            <li><strong>Claro Fixo</strong> <em>103 21</em></li>
+            <li><strong>Roaming Internacional</strong> <em>*468</em></li>
+            <li><strong>Tarifação do Roaming Internacional</strong> <em>0800 790 1021</em></li>
+            <li><strong>Proteção Móvel</strong> <em>0800 591 7055</em></li>
+            <li><strong>SAC Inbursa</strong> <em>11 3030 4444 / 0800 641 4444</em></li>
+            <li><strong>Agência de Cobrança</strong> <em>0800 208 8080 ou 3003 8080</em></li>
+            <li><strong>Televendas</strong> <em>0800 720 1234</em></li>
+            <li><strong>WhatsApp</strong> <em>(11) 9999-10621</em></li>
+            <li><strong>Vendas NET</strong> <em>4004 8844</em></li>
+            <li><strong>Vendas via WhatsApp</strong> <em>(11) 9 3200-2121</em></li>
+          </ul>
+          <footer class="credits">
+            <small>Criado por: Valdeson dos Santos, Gidevan Souza, Yuri Dias</small>
+          </footer>
         </div>
+      </aside>
+    </main>
+
+    <!-- Toast -->
+    <div id="toast" role="status" aria-live="polite" class="toast" hidden>
+      <span id="toast-text">Memorando copiado</span>
     </div>
 
     <script src="descontocontrole.js"></script>
-    <script src="proratacontrole.js"></script>
-</body>
+  </body>
 </html>

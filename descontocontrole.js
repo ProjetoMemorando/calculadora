@@ -1,72 +1,84 @@
-function calcular() {
-    
-    var valorPlano = parseFloat(document.getElementById("valorPlano").value);
+// app.js — versão com cópia do memorando + toast
 
-    var desconto1 = document.getElementById('a-descontoPorcentagem');
-	var value1 = desconto1.options[desconto1.selectedIndex].value;
+/* ===========================
+   Utilitários de moeda (BRL)
+   =========================== */
+const toNumber = (v) => {
+  if (typeof v !== 'string') return Number(v) || 0;
+  return Number(v.replace(/\./g, '').replace(',', '.')) || 0;
+};
 
-    var desconto2 = document.getElementById('b-descontoPorcentagem');
-	var value2 = desconto2.options[desconto2.selectedIndex].value;
+const toBRL = (n) =>
+  (isFinite(n) ? n : 0).toLocaleString('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+    minimumFractionDigits: 2,
+  });
 
-    var descontoReais1 = document.getElementById("a-descontoReais").value;
+const normalizeMoneyText = (text) => {
+  if (!text) return '0,00';
+  const normalized = text.replace(/\./g, ',').replace(/[^\d,]/g, '');
+  const parts = normalized.split(',');
+  const intPart = (parts[0] || '').replace(/\D/g, '') || '0';
+  let decPart = (parts[1] || '').replace(/\D/g, '');
+  decPart = decPart.slice(0, 2).padEnd(2, '0');
+  return `${intPart},${decPart}`;
+};
 
-    var descontoReais2 = document.getElementById("b-descontoReais").value;
+const formatInputAsMoneyOnBlur = (input) => {
+  if (!input.value) return;
+  const normalized = normalizeMoneyText(input.value);
+  input.value = toBRL(toNumber(normalized)).replace('R$ ', '').replace('R$', '').trim();
+};
 
-    var calc1 = value1 / 100;
-    var calc2 = value2 / 100;
-    
-    var calc3 = valorPlano * calc1;
-    var calc4 = valorPlano - calc3;
-    console.log(calc4);
+const restrictMoneyTyping = (input) => {
+  const pos = input.selectionStart;
+  const cleaned = input.value.replace(/[^\d.,]/g, '');
+  input.value = cleaned;
+  requestAnimationFrame(() => {
+    input.selectionStart = input.selectionEnd = pos;
+  });
+};
 
-    var calc5 = -(((value1 / 100) * valorPlano) - valorPlano);
-    var calc6 = -(((value2 / 100) * calc5) - calc5);
-    console.log(calc5);
-    console.log(calc6);
+/* ===========================
+   Seletores
+   =========================== */
+// Desconto
+const elPlano = document.getElementById('valor-plano');
+const elPerc1 = document.getElementById('perc1');
+const elPerc2 = document.getElementById('perc2');
+const elPerc1Out = document.getElementById('perc1-out');
+const elPerc2Out = document.getElementById('perc2-out');
+const elDescReais = document.getElementById('desc-reais');
+const elValorFinal = document.getElementById('valor-final');
+const formDesc = document.getElementById('form-desconto');
 
-    var calcFinal = calc6 - descontoReais1 - descontoReais2;
+// Proporcional
+const formProp = document.getElementById('form-prop');
+const elValorCheio = document.getElementById('valor-cheio');
+const elDiasUtil = document.getElementById('dias-util');
+const elAjusteOut = document.getElementById('ajuste-out');
+const elApagarOut = document.getElementById('apagar-out');
 
-    var calcFinalAgoraVai = (calcFinal).toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' });
-    var mostrar = document.getElementById("result");
-    mostrar.innerHTML = calcFinalAgoraVai;
+// Memorando + toast
+const btnMemorando = document.getElementById('btn-memorando');
+const boxMemorando = document.getElementById('memorando-result');
+const memorandoTip = document.getElementById('memorando-tip');
+const toast = document.getElementById('toast');
+const toastText = document.getElementById('toast-text');
 
-}
-
-function gerarMemo1() {
-
-    var valorPlano = parseFloat(document.getElementById("valorPlano").value);
-
-    var desconto1 = document.getElementById('a-descontoPorcentagem');
-	var value1 = desconto1.options[desconto1.selectedIndex].value;
-
-    var desconto2 = document.getElementById('b-descontoPorcentagem');
-	var value2 = desconto2.options[desconto2.selectedIndex].value;
-
-    var descontoReais1 = document.getElementById("a-descontoReais").value;
-
-    var descontoReais2 = document.getElementById("b-descontoReais").value;
-
-    var retido1 = document.querySelector('input[name="retido"]:checked').value;
-
-    var calc1 = value1 / 100;
-    var calc2 = value2 / 100;
-    
-    var calc3 = valorPlano * calc1;
-    var calc4 = valorPlano - calc3;
-    console.log(calc4);
-
-    var calc5 = -(((value1 / 100) * valorPlano) - valorPlano);
-    var calc6 = -(((value2 / 100) * calc5) - calc5);
-    console.log(calc5);
-    console.log(calc6);
-
-    var calcFinal = calc6 - descontoReais1 - descontoReais2;
-
-    var calcFinalAgoraVai = (calcFinal).toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' });
-
-    
-    if (retido1 == "argumentação") {
-        document.getElementById("resultadoMemo").value = `Cliente retido com argumentação sobre XXXXXXXXXXXXXXX (Ex: Multa, vencimento, ciclo)`;
+/* ===========================
+   Presets de porcentagem
+   =========================== */
+document.querySelectorAll('.chips .chip').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const pct = Number(btn.dataset.preset || 0);
+    const wrap = btn.closest('.field');
+    const slider = wrap.querySelector('input[type="range"]');
+    const out = wrap.querySelector('output');
+    if (slider && out) {
+      slider.value = pct;
+      out.textContent = `${pct}%`;
     }
 
     else {
