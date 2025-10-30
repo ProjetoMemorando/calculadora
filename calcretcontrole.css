@@ -1,1087 +1,434 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
+:root {
+  --bg: #0f1318;
+  --bg-elev: #141a20cc;
+  --glass: rgba(255, 255, 255, 0.06);
+  --stroke: #26313b;
+  --txt: #e6edf3;
+  --muted: #aeb6bf;
+  --accent: #cc2936;
+  --accent-2: #7a1fa2;
+  --success: #18a957;
+  --shadow: 0 6px 24px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  --radius: 16px;
+  --radius-pill: 999px;
+  --pad: 16px;
 }
 
-/* ### PRIMEIRA RESOLUÇÃO max-width: 1280px ### */
-@media (max-width: 1280px) {
-    #geral {
-        position: fixed;
-        background-color: brown;
-        width: 100%;
-        height: 100%;
-    }
-
-    #cabeçalho {
-        position: absolute;
-        background-color: #E5E5E5;
-        color: black;
-        width: 99.5%;
-        height: 50px;
-        padding-top: 2px;
-        text-align: center;
-        border: 4px silver outset;
-        border-radius: 10px;
-        margin: 3px;
-        box-shadow: 3px 3px 10px black;
-        font-size: 14px;
-    }
-
-    #dados1 {
-        position: absolute;
-        color: white;
-        font-weight: bold;
-        top: 75px;
-        left: 10px;
-        width: 260px;
-        height: 500px;
-        padding-left: 15px;
-        transition: 0.5s;
-    }
-
-    #dados1:hover {
-        color: white;
-        background-color: #14213D;
-        box-shadow: 5px 5px 20px black;
-        border-radius: 10px;
-        border: 3px silver outset;
-        top: 72px;
-        left: 10px;
-        transition: 0.5s;
-    }
-
-    #dados1 h2 {
-        color: white;
-        position: relative;
-        text-align: center;
-        left: -7px;
-        padding-top: 10px;
-        text-decoration: underline;
-        text-shadow: 3px 3px 15px black;
-        font-size: 19px;
-    }
-
-    #dados2 {
-        position: absolute;
-        color: black;
-        font-weight: bold;
-        top: 75px;
-        left: 280px;
-        width: 320px;
-        height: 500px;
-        padding-left: 15px;
-        transition: 0.5s;
-    }
-    
-    #dados2:hover {
-        background-color: #14213D;
-        color: white;
-        box-shadow: 5px 5px 20px black;
-        border-radius: 10px;
-        border: 3px silver outset;
-        top: 72px;
-        left: 277px;
-        transition: 0.5s;
-    }
-
-    #fieldset1 {
-        width: 280px;
-        height: 110px;
-        margin-top: 10px;
-        margin-left: 5px;
-    }
-    
-    #fieldset1 input, label {
-        color: white;
-        position: relative;
-        top: 15px;
-        left: 5px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-
-    #resultadoMemo {
-        position: relative;
-        top: 35px;
-        left: -2px;
-        width: 285px;
-        height: 260px;
-        border: 3px silver inset;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    #dados3 {
-        position: absolute;
-        background-color: white;
-        color: black;
-        top: 75px;
-        left: 910px;
-        width: 340px;
-        height: 490px;
-        padding-left: 15px;
-        border-radius: 40px;
-        font-size: 14px;
-        transition: 0.5s;
-    }
-
-    #dados3:hover {
-        box-shadow: 5px 5px 10px;
-        top: 72.5px;
-        left: 910px;
-        width: 350px;
-        height: 500px;
-        transition: 0.5s;
-        font-size: 14px;
-    }
-    
-    #dados3 p {
-        position: relative;
-        top: 20px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-    
-    #dados3 h2 {
-        position: relative;
-        top: 20px;
-        text-align: center;
-    }
-
-    #dados4 {
-        position: absolute;
-        color: white;
-        font-weight: bold;
-        top: 75px;
-        left: 610px;
-        width: 290px;
-        height: 500px;
-        padding-left: 15px;
-        transition: 0.5s;
-    }
-
-    #dados4 h2 {
-        color: white;
-        position: relative;
-        text-align: center;
-        left: -7px;
-        padding-top: 10px;
-        text-decoration: underline;
-        text-shadow: 3px 3px 15px black;
-        font-size: 19px;
-    }
-    
-    #dados4:hover {
-        background-color: #14213D;
-        color: white;
-        box-shadow: 5px 5px 20px black;
-        border-radius: 10px;
-        border: 3px silver outset;
-        top: 72px;
-        left: 607px;
-        transition: 0.5s;
-    }
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-/* ### SEGUNDA RESOLUÇÃO min-width: 1281px ### */
-@media (min-width: 1281px) {
-    #geral {
-        position: absolute;
-        background-color: brown;
-        width: 100%;
-        height: 100%;
-    }
-
-    #cabeçalho {
-        position: absolute;
-        background-color: #E5E5E5;
-        color: black;
-        width: 99.5%;
-        height: 50px;
-        padding-top: 2px;
-        text-align: center;
-        border: 4px silver outset;
-        border-radius: 10px;
-        margin: 3px;
-        box-shadow: 3px 3px 10px black;
-        font-size: 14px;
-    }
-
-    #dados1 {
-        position: absolute;
-        color: white;
-        font-weight: bold;
-        top: 75px;
-        left: 10px;
-        width: 260px;
-        height: 500px;
-        padding-left: 15px;
-        transition: 0.5s;
-    }
-
-    #dados1:hover {
-        color: white;
-        background-color: #14213D;
-        box-shadow: 5px 5px 20px black;
-        border-radius: 10px;
-        border: 3px silver outset;
-        top: 72px;
-        left: 10px;
-        transition: 0.5s;
-    }
-
-    #dados1 h2 {
-        color: white;
-        position: relative;
-        text-align: center;
-        left: -7px;
-        padding-top: 10px;
-        text-decoration: underline;
-        text-shadow: 3px 3px 15px black;
-        font-size: 19px;
-    }
-
-    #dados2 {
-        position: absolute;
-        color: black;
-        font-weight: bold;
-        top: 75px;
-        left: 280px;
-        width: 320px;
-        height: 500px;
-        padding-left: 15px;
-        transition: 0.5s;
-    }
-    
-    #dados2:hover {
-        background-color: #14213D;
-        color: white;
-        box-shadow: 5px 5px 20px black;
-        border-radius: 10px;
-        border: 3px silver outset;
-        top: 72px;
-        left: 277px;
-        transition: 0.5s;
-    }
-
-    #fieldset1 {
-        width: 280px;
-        height: 110px;
-        margin-top: 10px;
-        margin-left: 5px;
-    }
-    
-    #fieldset1 input, label {
-        color: white;
-        position: relative;
-        top: 15px;
-        left: 5px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-
-    #resultadoMemo {
-        position: relative;
-        top: 35px;
-        left: -2px;
-        width: 285px;
-        height: 260px;
-        border: 3px silver inset;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    #dados3 {
-        position: absolute;
-        background-color: white;
-        color: black;
-        top: 75px;
-        left: 910px;
-        width: 340px;
-        height: 490px;
-        padding-left: 15px;
-        border-radius: 40px;
-        font-size: 14px;
-        transition: 0.5s;
-    }
-
-    #dados3:hover {
-        box-shadow: 5px 5px 10px;
-        top: 72.5px;
-        left: 910px;
-        width: 350px;
-        height: 500px;
-        transition: 0.5s;
-        font-size: 14px;
-    }
-    
-    #dados3 p {
-        position: relative;
-        top: 20px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-    
-    #dados3 h2 {
-        position: relative;
-        top: 20px;
-        text-align: center;
-    }
-
-    #dados4 {
-        position: absolute;
-        color: white;
-        font-weight: bold;
-        top: 75px;
-        left: 610px;
-        width: 290px;
-        height: 500px;
-        padding-left: 15px;
-        transition: 0.5s;
-    }
-
-    #dados4 h2 {
-        color: white;
-        position: relative;
-        text-align: center;
-        left: -7px;
-        padding-top: 10px;
-        text-decoration: underline;
-        text-shadow: 3px 3px 15px black;
-        font-size: 19px;
-    }
-    
-    #dados4:hover {
-        background-color: #14213D;
-        color: white;
-        box-shadow: 5px 5px 20px black;
-        border-radius: 10px;
-        border: 3px silver outset;
-        top: 72px;
-        left: 607px;
-        transition: 0.5s;
-    }
-
+html,
+body {
+  height: 100%;
 }
 
-/* ### TERCEIRA RESOLUÇÃO min-width: 1281px ### */
-@media (min-width: 1366px) {
-    #geral {
-        position: absolute;
-        background-color: brown;
-        width: 100%;
-        height: 100%;
-    }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--txt);
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(204, 41, 54, 0.18), transparent 40%),
+              radial-gradient(900px 500px at 100% 0%, rgba(122, 31, 162, 0.2), transparent 40%),
+              var(--bg);
+}
 
-    #cabeçalho {
-        position: absolute;
-        background-color: #E5E5E5;
-        color: black;
-        width: 99.5%;
-        height: 50px;
-        padding-top: 2px;
-        text-align: center;
-        border: 4px silver outset;
-        border-radius: 10px;
-        margin: 3px;
-        box-shadow: 3px 3px 10px black;
-        font-size: 14px;
-    }
+/* Top App Bar */
+.app-bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px clamp(16px, 4vw, 32px);
+  background: linear-gradient(180deg, rgba(15, 19, 24, 0.8), rgba(15, 19, 24, 0.35));
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--stroke);
+}
 
-    #dados1 {
-        position: absolute;
-        color: white;
-        font-weight: bold;
-        top: 75px;
-        left: 10px;
-        width: 260px;
-        height: 500px;
-        padding-left: 15px;
-        transition: 0.5s;
-    }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
-    #dados1:hover {
-        color: white;
-        background-color: #14213D;
-        box-shadow: 5px 5px 20px black;
-        border-radius: 10px;
-        border: 3px silver outset;
-        top: 72px;
-        left: 10px;
-        transition: 0.5s;
-    }
+.logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: white;
+}
 
-    #dados1 h2 {
-        color: white;
-        position: relative;
-        text-align: center;
-        left: -7px;
-        padding-top: 10px;
-        text-decoration: underline;
-        text-shadow: 3px 3px 15px black;
-        font-size: 19px;
-    }
+.title {
+  font-size: clamp(16px, 2vw, 20px);
+  margin: 0;
+}
 
-    #dados2 {
-        position: absolute;
-        color: black;
-        font-weight: bold;
-        top: 75px;
-        left: 280px;
-        width: 320px;
-        height: 500px;
-        padding-left: 15px;
-        transition: 0.5s;
-    }
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  background: transparent;
+  border: 1px solid var(--stroke);
+  color: var(--txt);
+  border-radius: var(--radius-pill);
+  height: 40px;
+  width: 40px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.icon-btn:hover { border-color: var(--muted); }
+.material-symbols { font-family: inherit; }
+
+/* Avatar */
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background:
+    radial-gradient(120% 120% at 0% 0%, rgba(204, 41, 54, .65), rgba(122, 31, 162, .65)),
+    linear-gradient(180deg, #1d2430, #151b22);
+  border: 1px solid var(--stroke);
+}
+
+/* Layout */
+.container {
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 340px);
+  gap: clamp(16px, 2.5vw, 28px);
+  padding: clamp(16px, 4vw, 32px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: clamp(16px, 2vw, 24px);
+}
+
+@media (max-width: 1200px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 860px) {
+  .container { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: 1fr; }
+}
+
+/* Card */
+.card {
+  background: linear-gradient(180deg, var(--bg-elev), rgba(20, 26, 32, 0.75));
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: clip;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 16px 8px;
+}
+
+.card-header.sticky {
+  position: sticky;
+  top: 72px; /* abaixo da app bar */
+  background: inherit;
+  backdrop-filter: blur(6px);
+  z-index: 10;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.card-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(204, 41, 54, 0.25), rgba(122, 31, 162, 0.25));
+  border: 1px solid var(--stroke);
+  display: grid;
+  place-items: center;
+  color: var(--txt);
+  font-weight: 700;
+}
+
+.card-body {
+  padding: 8px 16px 16px;
+}
+
+/* Fields */
+.field {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.field.two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+label {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.input-prefix {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 8px;
+  background: var(--glass);
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.input-prefix.readonly {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.input-prefix span {
+  color: var(--muted);
+}
+
+input[type="text"],
+input[type="number"],
+input[inputmode="decimal"],
+input:not([type]),
+.input-prefix input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--txt);
+  font-size: 15px;
+  width: 100%;
+}
+
+input::placeholder { color: #8392a3; }
+
+.hint {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.readonly input[readonly] {
+  color: #d6dde6;
+}
+
+/* Range + Output */
+.slider-wrap {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.slider-wrap input[type="range"] {
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: #1f2833;
+  outline: none;
+}
+.slider-wrap input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border: 2px solid #0e1216;
+  cursor: pointer;
+}
+.slider-wrap output {
+  min-width: 44px;
+  text-align: right;
+  color: var(--muted);
+}
+
+/* Chips presets */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chip {
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--stroke);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--txt);
+  cursor: pointer;
+}
+.chip:hover { border-color: var(--muted); }
+
+/* Radios */
+.fieldset {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 8px 0 16px;
+}
+.radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--stroke);
+  background: rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+  user-select: none;
+}
+.radio input { accent-color: var(--accent); }
+
+/* Buttons */
+.btn {
+  appearance: none;
+  border: 1px solid var(--stroke);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--txt);
+  border-radius: var(--radius-pill);
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.btn:hover { border-color: var(--muted); }
+.btn.primary {
+  background: linear-gradient(135deg, rgba(204, 41, 54, 0.9), rgba(122, 31, 162, 0.9));
+  border: none;
+}
+.btn.secondary {
+  background: linear-gradient(135deg, rgba(204, 41, 54, 0.25), rgba(122, 31, 162, 0.25));
+  border: 1px solid var(--stroke);
+}
+.btn.ghost {
+  background: transparent;
+}
+
+.actions-row {
+  margin-top: 8px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Chip outputs */
+.chip-output {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  padding: 12px;
+  display: grid;
+  gap: 6px;
+}
+.chip-output span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* Sidebar */
+.sidebar .info-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+.sidebar .info-list li {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--stroke);
+}
+.sidebar .credits {
+  margin-top: 16px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Memorando */
+.memorando {
+  margin-top: 12px;
+  white-space: pre-wrap;
+  border: 1px dashed var(--stroke);
+  border-radius: 12px;
+  padding: 12px;
+  color: #cfe8ff;
+  background: rgba(0, 64, 128, 0.08);
+  cursor: pointer;
+  user-select: text;
+}
+.memorando:hover {
+  border-style: solid;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%) translateY(16px);
+  background: linear-gradient(135deg, rgba(204, 41, 54, 0.95), rgba(122, 31, 162, 0.95));
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: transform .2s ease, opacity .2s ease;
+  z-index: 1000;
+  font-weight: 600;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* A11y */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; overflow: hidden;
+  clip: rect(0,0,0,0); border: 0;
+}
+
+#apagar-out {
+    color: var(--success);
+}
+
+#ajuste-out {
+    color: #C12845;
+}
+
+#ajuste-out:hover, #apagar-out:hover {
+    color: #FFFFFF;    
+}
+
+.fieldset {
+    border-radius: 12px !important;
+    border: 2px solid var(--stroke) !important;
+    padding: 8px !important;
     
-    #dados2:hover {
-        background-color: #14213D;
-        color: white;
-        box-shadow: 5px 5px 20px black;
-        border-radius: 10px;
-        border: 3px silver outset;
-        top: 72px;
-        left: 277px;
-        transition: 0.5s;
-    }
-
-    #fieldset1 {
-        width: 280px;
-        height: 110px;
-        margin-top: 10px;
-        margin-left: 5px;
-    }
-    
-    #fieldset1 input, label {
-        color: white;
-        position: relative;
-        top: 15px;
-        left: 5px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-
-    #resultadoMemo {
-        position: relative;
-        top: 35px;
-        left: -2px;
-        width: 285px;
-        height: 260px;
-        border: 3px silver inset;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    #dados3 {
-        position: absolute;
-        background-color: white;
-        color: black;
-        top: 75px;
-        left: 910px;
-        width: 340px;
-        height: 500px;
-        padding-left: 15px;
-        border-radius: 40px;
-        font-size: 14px;
-        transition: 0.5s;
-    }
-
-    #dados3:hover {
-        box-shadow: 5px 5px 10px;
-        top: 72.5px;
-        left: 910px;
-        width: 350px;
-        height: 505px;
-        transition: 0.5s;
-        font-size: 14px;
-    }
-    
-    #dados3 p {
-        position: relative;
-        top: 20px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-    
-    #dados3 h2 {
-        position: relative;
-        top: 20px;
-        text-align: center;
-    }
-
-    #dados4 {
-        position: absolute;
-        color: white;
-        font-weight: bold;
-        top: 75px;
-        left: 610px;
-        width: 290px;
-        height: 500px;
-        padding-left: 15px;
-        transition: 0.5s;
-    }
-
-    #dados4 h2 {
-        color: white;
-        position: relative;
-        text-align: center;
-        left: -7px;
-        padding-top: 10px;
-        text-decoration: underline;
-        text-shadow: 3px 3px 15px black;
-        font-size: 19px;
-    }
-    
-    #dados4:hover {
-        background-color: #14213D;
-        color: white;
-        box-shadow: 5px 5px 20px black;
-        border-radius: 10px;
-        border: 3px silver outset;
-        top: 72px;
-        left: 607px;
-        transition: 0.5s;
-    }
-
 }
 
-/* ### QUARTA RESOLUÇÃO min-width: 1281px ### */
-@media (min-width: 1440px) {
-    #geral {
-        position: absolute;
-        background-color: brown;
-        width: 100%;
-        height: 100%;
-    }
-
-    #cabeçalho {
-        position: absolute;
-        background-color: #E5E5E5;
-        color: black;
-        width: 99.5%;
-        height: 50px;
-        padding-top: 2px;
-        text-align: center;
-        border: 4px silver outset;
-        border-radius: 10px;
-        margin: 3px;
-        box-shadow: 3px 3px 10px black;
-        font-size: 14px;
-    }
-
-    #dados1 {
-        position: absolute;
-        color: white;
-        font-weight: bold;
-        top: 75px;
-        left: 10px;
-        width: 260px;
-        height: 500px;
-        padding-left: 15px;
-        transition: 0.5s;
-    }
-
-    #dados1:hover {
-        color: white;
-        background-color: #14213D;
-        box-shadow: 5px 5px 20px black;
-        border-radius: 10px;
-        border: 3px silver outset;
-        top: 72px;
-        left: 10px;
-        transition: 0.5s;
-    }
-
-    #dados1 h2 {
-        color: white;
-        position: relative;
-        text-align: center;
-        left: -7px;
-        padding-top: 10px;
-        text-decoration: underline;
-        text-shadow: 3px 3px 15px black;
-        font-size: 19px;
-    }
-
-    #dados2 {
-        position: absolute;
-        color: black;
-        font-weight: bold;
-        top: 75px;
-        left: 280px;
-        width: 320px;
-        height: 500px;
-        padding-left: 15px;
-        transition: 0.5s;
-    }
-    
-    #dados2:hover {
-        background-color: #14213D;
-        color: white;
-        box-shadow: 5px 5px 20px black;
-        border-radius: 10px;
-        border: 3px silver outset;
-        top: 72px;
-        left: 277px;
-        transition: 0.5s;
-    }
-
-    #fieldset1 {
-        width: 280px;
-        height: 110px;
-        margin-top: 10px;
-        margin-left: 5px;
-    }
-    
-    #fieldset1 input, label {
-        color: white;
-        position: relative;
-        top: 15px;
-        left: 5px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-
-    #resultadoMemo {
-        position: relative;
-        top: 35px;
-        left: -2px;
-        width: 285px;
-        height: 260px;
-        border: 3px silver inset;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    #dados3 {
-        position: absolute;
-        background-color: white;
-        color: black;
-        top: 75px;
-        left: 910px;
-        width: 340px;
-        height: 500px;
-        padding-left: 15px;
-        border-radius: 40px;
-        font-size: 14px;
-        transition: 0.5s;
-    }
-
-    #dados3:hover {
-        box-shadow: 5px 5px 10px;
-        top: 72.5px;
-        left: 910px;
-        width: 350px;
-        height: 505px;
-        transition: 0.5s;
-        font-size: 14px;
-    }
-    
-    #dados3 p {
-        position: relative;
-        top: 20px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-    
-    #dados3 h2 {
-        position: relative;
-        top: 20px;
-        text-align: center;
-    }
-
-    #dados4 {
-        position: absolute;
-        color: white;
-        font-weight: bold;
-        top: 75px;
-        left: 610px;
-        width: 290px;
-        height: 500px;
-        padding-left: 15px;
-        transition: 0.5s;
-    }
-
-    #dados4 h2 {
-        color: white;
-        position: relative;
-        text-align: center;
-        left: -7px;
-        padding-top: 10px;
-        text-decoration: underline;
-        text-shadow: 3px 3px 15px black;
-        font-size: 19px;
-    }
-    
-    #dados4:hover {
-        background-color: #14213D;
-        color: white;
-        box-shadow: 5px 5px 20px black;
-        border-radius: 10px;
-        border: 3px silver outset;
-        top: 72px;
-        left: 607px;
-        transition: 0.5s;
-    }
-
-}
-
-/* ### QUINTA RESOLUÇÃO min-width: 1281px ### */
-@media (min-width: 1600px) {
-    #geral {
-        position: absolute;
-        background-color: brown;
-        width: 100%;
-        height: 100%;
-    }
-
-    #cabeçalho {
-        position: absolute;
-        background-color: #E5E5E5;
-        color: black;
-        width: 99.5%;
-        height: 50px;
-        padding-top: 2px;
-        text-align: center;
-        border: 4px silver outset;
-        border-radius: 10px;
-        margin: 3px;
-        box-shadow: 3px 3px 10px black;
-        font-size: 14px;
-    }
-
-    #dados1 {
-        position: absolute;
-        color: white;
-        font-weight: bold;
-        top: 75px;
-        left: 10px;
-        width: 260px;
-        height: 600px;
-        padding-left: 15px;
-        transition: 0.5s;
-    }
-
-    #dados1:hover {
-        color: white;
-        background-color: #14213D;
-        box-shadow: 5px 5px 20px black;
-        border-radius: 10px;
-        border: 3px silver outset;
-        top: 72px;
-        left: 10px;
-        transition: 0.5s;
-    }
-
-    #dados1 h2 {
-        color: white;
-        position: relative;
-        text-align: center;
-        left: -7px;
-        padding-top: 10px;
-        text-decoration: underline;
-        text-shadow: 3px 3px 15px black;
-        font-size: 19px;
-    }
-
-    #dados2 {
-        position: absolute;
-        color: black;
-        font-weight: bold;
-        top: 75px;
-        left: 280px;
-        width: 350px;
-        height: 600px;
-        padding-left: 15px;
-        transition: 0.5s;
-    }
-    
-    #dados2:hover {
-        background-color: #14213D;
-        color: white;
-        box-shadow: 5px 5px 20px black;
-        border-radius: 10px;
-        border: 3px silver outset;
-        top: 72px;
-        left: 277px;
-        transition: 0.5s;
-    }
-
-    #fieldset1 {
-        width: 300px;
-        height: 110px;
-        margin-top: 10px;
-        margin-left: 5px;
-    }
-    
-    #fieldset1 input, label {
-        color: white;
-        position: relative;
-        top: 15px;
-        left: 5px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-
-    #resultadoMemo {
-        position: relative;
-        top: 35px;
-        left: -2px;
-        width: 320px;
-        height: 300px;
-        border: 3px silver inset;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    #dados3 {
-        position: absolute;
-        background-color: white;
-        color: black;
-        top: 75px;
-        left: 1010px;
-        width: 340px;
-        height: 600px;
-        padding-left: 15px;
-        border-radius: 40px;
-        font-size: 14px;
-        transition: 0.5s;
-    }
-
-    #dados3:hover {
-        box-shadow: 5px 5px 10px;
-        top: 72.5px;
-        left: 1007px;
-        width: 350px;
-        height: 605px;
-        transition: 0.5s;
-        font-size: 14px;
-    }
-    
-    #dados3 p {
-        position: relative;
-        top: 20px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-    
-    #dados3 h2 {
-        position: relative;
-        top: 20px;
-        text-align: center;
-    }
-
-    #dados4 {
-        position: absolute;
-        color: white;
-        font-weight: bold;
-        top: 75px;
-        left: 640px;
-        width: 320px;
-        height: 600px;
-        padding-left: 15px;
-        transition: 0.5s;
-    }
-
-    #dados4 h2 {
-        color: white;
-        position: relative;
-        text-align: center;
-        left: -7px;
-        padding-top: 10px;
-        text-decoration: underline;
-        text-shadow: 3px 3px 15px black;
-        font-size: 19px;
-    }
-    
-    #dados4:hover {
-        background-color: #14213D;
-        color: white;
-        box-shadow: 5px 5px 20px black;
-        border-radius: 10px;
-        border: 3px silver outset;
-        top: 72px;
-        left: 637px;
-        transition: 0.5s;
-    }
-
-}
-
-#result {
-    position: relative;
-    background-color: white;
-    color: black;
-    width: 100px;
-    height: 25px;
-    text-align: center;
-    padding-top: 1px;
-    border: 3px silver inset;
-}
-
-#resultado_proprocional {
-    width: 180px;
-}
-
-#a_pagar {
-    width: 180px;
-}
-
-.inputsDados {
-    background-color: white;
-    position: relative;
-    width: 100px;
-    height: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    text-align: center;
-    border: 3px silver inset;
-    border-radius: 4px;
-}
-
-#dados1 select {
-    padding-left: 20px;
-    background-color: white;
-
-}
-
-#dados1 p {
-    position: relative;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-
-/* #dados3-1 {
-    position: absolute;
-} */
-
-#valorDia1 {
-    position: absolute;
-    top: 75px;
-    left: 178px;
-    width: 140px;
-    height: 60px;
-    text-align: right;
-}
-
-#valorDia2 {
-    color: black;
-    position: relative;
-    float: right;
-}
-
-#data1 {
-    width: 135px;
-}
-
-#data2 {
-    width: 135px;
-}
-
-#result2 {
-    width: 360px;
-    height: 25px;
-    text-align: left;
-    padding-left: 5px;
-    color: black;
-}
-
-legend {
-    color: white;
-    font-size: 20px;
-    text-shadow: 5px 5px 15px black;
-
-}
-
-#resultadoMemo {
-    display: none;
-}
-
-#nomes {
-    position: absolute;
-    float: right;
-    color: white;
-    bottom: 5px;
-    right: 10px;
-}
-
-/* ==================================================================================================== */
-
-/* BOTÕES */
-
-.btn-primary {
-    color: #fff;
-    background-color: #0d6efd;
-    border-color: #0d6efd;
-  }
-  .btn-primary:hover {
-    color: #fff;
-    background-color: #0b5ed7;
-    border-color: #0a58ca;
-  }
-  .btn-check:focus + .btn-primary, .btn-primary:focus {
-    color: #fff;
-    background-color: #0b5ed7;
-    border-color: #0a58ca;
-    box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
-  }
-  .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
-    color: #fff;
-    background-color: #0a58ca;
-    border-color: #0a53be;
-  }
-  .btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
-  }
-  .btn-primary:disabled, .btn-primary.disabled {
-    color: #fff;
-    background-color: #0d6efd;
-    border-color: #0d6efd;
-  }
-
-  .btn {
-    display: inline-block;
-    left: 1px;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    background-color: #6c757d;
-    border: 2px solid #fff;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .btn {
-      transition: none;
-    }
-  }
-  .btn:hover {
-    color: #fff;
-  }
-  .btn-check:focus + .btn, .btn:focus {
-    outline: 0;
-    box-shadow: 0 0 0 0.25rem whitesmoke;
-  }
-  .btn:disabled, .btn.disabled, fieldset:disabled .btn {
-    pointer-events: none;
-    opacity: 0.65;
-  }
-
-#Bt {
-    position: relative;
-    top: 20px;
-}
-
-#Bt3 {
-    position: relative;
-    top: 20px;
+#dias-util {
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  height: 2rem;
+  padding-left: 20px !important;
+  margin-bottom: 16px;
 }
